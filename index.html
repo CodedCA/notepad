@@ -1,100 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/main.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="src/icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="src/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="src/icon/favicon-16x16.png">
-  <link rel="manifest" href="src/icon/site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  
-  <script src="https://kit.fontawesome.com/b43d653dfa.js" crossorigin="anonymous"></script>
-  <title>Dark Box</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/main.css">
+    <script src="./src/script/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <title>Notepad</title>
 </head>
 <body>
-  <header>
-    <div class="h-box-left">
-      <h1 class="logo unselectable"><span class="split">DBX</span></h1>
-    </div>
-    <div class="h-box-right">
-      <a href="index.html" class="btn">HOME</a>
-      <a class="btn" href="#features">FEATURES</a>
-      <a class="btn" href="#about">ABOUT</a>
-      <a href="#testimonials" class="btn">TESTIMONIALS</a>
-      <a href="mailto:" class="btn spc">CONTACT</a>
-    </div>
-  </header>
-  <introduce>
-    <div class="i-img-text">
-      <div class="teste">
-        <h1 class="i-text">DARK <span class="split">BOX</span></h1>
-        <h3 class="i-sub-text">Welcome to the darkness.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="split">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></h3>
-      </div>
-      <div class="button-main-txt">
-        <button class="btn-main">Get Started</button>
-      </div>
-      <a href="#features">
-        <div class="scrollar">
-          <object class="scroll-out">
-            <object id="features" class="scroll-in"></object>
-          </object>
-        </div>
-      </a>
-    </div>
-  </introduce>
-  <mid class="t-mid" >
-    <h1  class="main-txt-mid">The best <span class="underline">FEATURES</span></h1>
-    <div class="mid">
-      <div class="card-one">
-        <i class="circle fas fa-shield-alt"></i>
-        <h3 class="c-m-txt">Security</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-      </div>
-      <object class="line"></object>
-      <div class="card-one z">
-        <i class="circle fas fa-feather-alt"></i>
-        <h3 class="c-m-txt">Lightest</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-      </div>
-      <object class="line x"></object>
-      <div class="card-one">
-        <i class="circle fas fa-fingerprint"></i>
-        <h3 class="c-m-txt">Unique</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-      </div>
-    </div>
-  </mid>
-  <section class="container" id="about">
-    <object class="u"></object>
-    <div>
-      <h1 class="container-txt"><span class="underline">About</span></h1>
-      <h3 class="container-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-    </div>
-  </section>
-  <section class="container" >
-    <object class="u l" ></object>
-    <h1 class="container-txt"><span class="underline">Test</span>imonials</h1>
-    <div class="d" id="testimonials">
-      <div class="card-one k">
-        <i class="photo-c circle"></i>
-        <h3 class="c-m-txt">Rhay</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-      </div>
+    <header class="header">
+        <h1 class="main-text">Notepad&nbsp</h1><i class="em em-spiral_note_pad" aria-role="presentation" aria-label=""></i>
+    </header>
 
-      <div class="card-one k">
-        <i class="photo-n circle"></i>
-        <h3 class="c-m-txt">Haiten</h3>
-        <h4 class="c-s-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-      </div>
+    <div class="text-box">
+        <textarea autofocus="autofocus" id="textArea" class="textarea" placeholder="Write here your notes!"></textarea>
+        <menu>
+            <img onclick="exclude()" class="command-i" src="./src/backspace-svgrepo-com.svg">
+            <img onclick="center()" class="command-i x" src="./src/align-center-svgrepo-com.svg">
+            <img onclick="left()" class="command-i y" src="./src/align-left-svgrepo-com.svg">
+            <img onclick="right()" class="command-i z" src="./src/align-right-svgrepo-com.svg">
+        </menu>
     </div>
-  </section>
-  <section class="footer">
-    <div>
-      <object class="footer-line"></object>
-      <h3 class="footer-txt">2022 © coded.today - All rights reserved.</h3>
+    <div class="footer">
+        <h1 id="wordCount" class="textCount">0</h1><h1 id="lineCount" class="textCount">0</h1>
     </div>
-  </section>
+    <script>
+        document.getElementById("textArea").addEventListener("keyup", check);
+        document.getElementById("textArea").addEventListener("keyup", lineCount);
+    </script>
+
 </body>
 </html>
